@@ -1,0 +1,75 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117107-49891-n66gl1.0abuaqbyb9"
+    ]
+  ],
+  "_from": "../d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+  "_id": "symbols-plus@0.1.1",
+  "_inCache": true,
+  "_location": "/symbols-plus",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+  "_shasum": "75fe7989311066fab4691727ea0e5bae881d4502",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-49891-6muiv4.ijs3ba9k9/package.tgz",
+  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117107-49891-n66gl1.0abuaqbyb9",
+  "bugs": {
+    "url": "https://github.com/mehcode/atom-symbols-plus/issues"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.2.0",
+    "underscore-plus": "^1.6.6"
+  },
+  "description": "Symbol browser and (project-wide) jump (replaces built-in symbols-view).",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.5.0 <2.0.0"
+  },
+  "homepage": "https://github.com/mehcode/atom-symbols-plus#readme",
+  "keywords": [
+    "productivity",
+    "workflow",
+    "tags",
+    "tag",
+    "taglist",
+    "goto",
+    "jump",
+    "declaration",
+    "symbol",
+    "symbols",
+    "outline"
+  ],
+  "license": "MIT",
+  "main": "./lib/symbols-plus",
+  "name": "symbols-plus",
+  "optionalDependencies": {},
+  "readme": "# Symbols Plus\n> Symbol browser and (project-wide) jump (replaces built-in symbols-view).\n\n### Work in progress\n\n - [x] Find symbol in file\n - [ ] Find symbol in project\n - [ ] Go To Definition\n - [ ] Go Back\n - [ ] Symbol Pane\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehcode/atom-symbols-plus.git"
+  },
+  "version": "0.1.1"
+}

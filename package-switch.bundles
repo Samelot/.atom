@@ -1,0 +1,166 @@
+{
+  "sam": {
+    "packages": [
+      {
+        "name": "about",
+        "action": "removed"
+      },
+      {
+        "name": "atom-cursor-indent",
+        "action": "removed"
+      },
+      {
+        "name": "atom-jump-block",
+        "action": "removed"
+      },
+      {
+        "name": "atom-macros",
+        "action": "added"
+      },
+      {
+        "name": "auto-fold",
+        "action": "removed"
+      },
+      {
+        "name": "background-tips",
+        "action": "removed"
+      },
+      {
+        "name": "browse",
+        "action": "added"
+      },
+      {
+        "name": "casefile",
+        "action": "removed"
+      },
+      {
+        "name": "code-annotations",
+        "action": "removed"
+      },
+      {
+        "name": "code-peek",
+        "action": "removed"
+      },
+      {
+        "name": "codesidestory-atom",
+        "action": "removed"
+      },
+      {
+        "name": "comment-anchors",
+        "action": "added"
+      },
+      {
+        "name": "expand-region",
+        "action": "removed"
+      },
+      {
+        "name": "fold-functions",
+        "action": "removed"
+      },
+      {
+        "name": "fold-navigator",
+        "action": "added"
+      },
+      {
+        "name": "folded-code-preview",
+        "action": "added"
+      },
+      {
+        "name": "foldingtext-for-atom",
+        "action": "removed"
+      },
+      {
+        "name": "full-path-in-title-bar",
+        "action": "removed"
+      },
+      {
+        "name": "imdone-atom",
+        "action": "added"
+      },
+      {
+        "name": "indent-guide-improved",
+        "action": "added"
+      },
+      {
+        "name": "jumpy",
+        "action": "removed"
+      },
+      {
+        "name": "language-lua",
+        "action": "added"
+      },
+      {
+        "name": "language-todo",
+        "action": "removed"
+      },
+      {
+        "name": "language-todo-extra-words",
+        "action": "added"
+      },
+      {
+        "name": "line-jumper",
+        "action": "removed"
+      },
+      {
+        "name": "line-navigation",
+        "action": "removed"
+      },
+      {
+        "name": "metrics",
+        "action": "removed"
+      },
+      {
+        "name": "mzlp-bookmark",
+        "action": "added"
+      },
+      {
+        "name": "organized",
+        "action": "added"
+      },
+      {
+        "name": "package-generator",
+        "action": "removed"
+      },
+      {
+        "name": "package-switch",
+        "action": "added"
+      },
+      {
+        "name": "recent-files-fuzzy-finder",
+        "action": "added"
+      },
+      {
+        "name": "smart-backspace",
+        "action": "removed"
+      },
+      {
+        "name": "sourcerer",
+        "action": "removed"
+      },
+      {
+        "name": "sublime-word-navigation",
+        "action": "removed"
+      },
+      {
+        "name": "timecop",
+        "action": "removed"
+      },
+      {
+        "name": "todo-show",
+        "action": "added"
+      },
+      {
+        "name": "token-navigation",
+        "action": "removed"
+      },
+      {
+        "name": "welcome",
+        "action": "removed"
+      },
+      {
+        "name": "wrap-guide",
+        "action": "removed"
+      }
+    ]
+  }
+}

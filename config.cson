@@ -1,0 +1,65 @@
+"*":
+  core:
+    disabledPackages: [
+      "about"
+      "atom-cursor-indent"
+      "atom-jump-block"
+      "auto-fold"
+      "background-tips"
+      "code-peek"
+      "codesidestory-atom"
+      "expand-region"
+      "foldingtext-for-atom"
+      "full-path-in-title-bar"
+      "jumpy"
+      "language-todo"
+      "line-jumper"
+      "line-navigation"
+      "metrics"
+      "package-generator"
+      "smart-backspace"
+      "sourcerer"
+      "sublime-word-navigation"
+      "timecop"
+      "token-navigation"
+      "welcome"
+      "wrap-guide"
+      "casefile"
+    ]
+    telemetryConsent: "no"
+  editor:
+    autoIndentOnPaste: false
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "c093718b-31f0-485b-aa2a-08513e1eb005"
+  "symbols-tree-nav":
+    autoToggle: true
+  "todo-show":
+    findTheseTodos: [
+      "TODO"
+      "FIXME"
+      "CHANGED"
+      "XXX"
+      "IDEA"
+      "HACK"
+      "NOTE"
+      "REVIEW"
+      "NB"
+      "BUG"
+      "QUESTION"
+      "COMBAK"
+      "TEMP"
+      "SAM"
+    ]
+    showInTable: [
+      "Line"
+      "Text"
+      "Type"
+      "Path"
+    ]
+    sortBy: "Line"
+".text.todo_extra":
+  editor:
+    showIndentGuide: false
+    showInvisibles: false
