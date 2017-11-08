@@ -1,0 +1,84 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117107-52431-1ajnzo1.hnxby8ehfr"
+    ]
+  ],
+  "_from": "../d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+  "_id": "code-annotations@2.1.3",
+  "_inCache": true,
+  "_location": "/code-annotations",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+  "_shasum": "5d26211ada3bbd4a8c9c664b7bab8a40c35008d1",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117107-52431-1w6a8dt.pug0221emi/package.tgz",
+  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117107-52431-1ajnzo1.hnxby8ehfr",
+  "activationCommands": {},
+  "author": {
+    "name": "Jim Neuendorf",
+    "url": "https://github.com/jneuendorf"
+  },
+  "bugs": {
+    "url": "https://github.com/jneuendorf/code-annotations/issues"
+  },
+  "consumedServices": {
+    "renderer": {
+      "versions": {
+        "1.0.0": "registerRenderer"
+      }
+    }
+  },
+  "dependencies": {
+    "atom-space-pen-views": "~2.2.0",
+    "fs-plus": "~2.9.1",
+    "path": "~0.12.7",
+    "season": "~5.3.0"
+  },
+  "description": "An atom package for annotating your source with anything",
+  "devDependencies": {
+    "coffeelint": "~1.15.7"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/jneuendorf/code-annotations#readme",
+  "keywords": [
+    "code",
+    "annotate",
+    "annotation",
+    "documentation"
+  ],
+  "license": "MIT",
+  "main": "./lib/annotation-manager",
+  "name": "code-annotations",
+  "optionalDependencies": {},
+  "readme": "# Code Annotations ([Atom](http://atom.io) package)\n\n## Description\n\nThis is an atom package for creating code annotations.\nAn annotation is a piece of content that has a name and can be displayed in atom.\nWhile working only the name of the code annotation is visible but it can be shown by clicking on the pin icon (in the atom gutter)\n\n![Basic usage](https://github.com/jneuendorf/code-annotations/raw/master/gifs/basic-usage.gif)\n\nBy default, this package can render the following kinds of content:\n\n- images\n- html\n- links / URLs\n- plain text\n\nFurther renderers can be added by installing code-annotation plugin packages.\n\n\n## Usage\n\n### Creation and destruction\n\nCode annotations can be added and deleted from the context menu, from the `ShowCommandsView`, and of course from the command palette.\nWhen adding or removing the position is the current (or last) cursor is relevant (so just right clicking to a certain position is insufficient (for now)).\nA new annotation is added above the line of the cursor; for deleting one the cursor must be at the annotation's line.\n\nEach annotation is identified by a name (so it must be unique among all annotations of the same project folder).\n\nWhen creating an annotation its contents can be set in 2 ways:\n\n1. from a file (for e.g. images)\n2. from text input (for e.g. plain text)\n\t- All annotations from text input are displayed as plain text first. The type can be changed later.\n\n\n### Navigating to annotations\n\nWith the `show-all` command a select list containing all package commands\n\n\n### Shortcuts\n\nThere are only 2: `ctrl-alt-c ctrl-alt-c` and `escape`.\n\nYes, the first is what it looks like - `ctr-alt-c` twice in a row.\nThis shortcut shows a select list with the commands of the package (so this is kinda like a prefiltered command palette).\n\n`escape` is for hiding the container (see next section).\n\nThe reasoning behind this is to avoid conflicts with other packages without making it harder to use the package without the mouse.\n\n\n### Showing annotations (rendering)\n\nEach annotation is associated with a file. The file extension of that file determines how the file contents are rendered in the popup (called `CodeAnnotationContainer`).\nThus the `hide-container` command (which is triggered on `escape`).\n\nThe container is made visible by clicking on the icon displayed in the [gutter](https://atom.io/docs/api/latest/Gutter) - currently this is a pin icon.\n\n\n## Supported grammars\n\n- [C](https://atom.io/packages/language-c)\n- [C#](https://atom.io/packages/language-csharp)\n- [CoffeeScript](https://atom.io/packages/language-coffee-script)\n- [CSS](https://atom.io/packages/language-css)\n- [C++](https://atom.io/packages/language-c)\n- [GitHub Flavored Markdown](https://atom.io/packages/language-gfm)\n- [Go](https://atom.io/packages/language-go)\n- [Haskell](https://atom.io/packages/language-haskell)\n- [HTML](https://atom.io/packages/language-html)\n- [HTML (Ruby - ERB)](https://atom.io/packages/language-ruby)\n- [Java](https://atom.io/packages/language-java)\n- [JavaScript](https://atom.io/packages/language-javascript)\n- [LaTeX](https://atom.io/packages/language-latex)\n- [Less](https://atom.io/packages/language-less)\n- [MATLAB](https://atom.io/packages/language-matlab)\n- [Objective-C](https://atom.io/packages/language-objective-c)\n- [Objective-C++](https://atom.io/packages/language-objective-c)\n- [Octave](https://atom.io/packages/language-matlab)\n- [Perl](https://atom.io/packages/language-perl)\n- [Perl 6](https://atom.io/packages/language-perl)\n- [PHP](https://atom.io/packages/language-php)\n- [Python](https://atom.io/packages/language-python)\n- [R](https://atom.io/packages/language-r)\n- [Ruby](https://atom.io/packages/language-ruby)\n- [Sass](https://atom.io/packages/language-sass)\n- [Scala](https://atom.io/packages/language-scala)\n- [SCSS](https://atom.io/packages/language-scss)\n- [Shell Script](https://atom.io/packages/language-shellscript)\n- [SQL](https://atom.io/packages/language-sql)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jneuendorf/code-annotations.git"
+  },
+  "version": "2.1.3"
+}

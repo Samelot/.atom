@@ -1,0 +1,128 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "octicon-mixins";
+
+@top-block-height: 52px;
+@top-block-margin: 8px;
+@middle-line-height: 22px;
+@top-block-top: 0px;
+@middle-line-top: @top-block-height;
+@bottom-block-top: @middle-line-top + @middle-line-height;
+
+
+code-annotation-container {
+    background-color: @app-background-color;
+    border: 2px solid @base-border-color;
+    bottom: 10%;
+    box-shadow: 0 0 12px 6px @app-background-color;
+    box-sizing: border-box;
+    left: 10%;
+    overflow: hidden;
+    padding: 6px;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    z-index: 100;
+
+    // pseudo styling for exposing styles to javascript
+    .hidden {
+        background-color: @app-background-color;
+        color: @text-color;
+    }
+
+    .top.block {
+        height: @top-block-height - @top-block-margin;
+        position: absolute;
+        width: 100%;
+        z-index: 110;
+
+        .name {
+            float: left;
+            width: 45%;
+
+            h4 {
+                margin-top: 15px;
+            }
+        }
+        .buttons {
+            float: left;
+            padding-right: 6px;
+            width: 55%;
+        }
+    }
+
+    .middle.line {
+        border-top: 2px solid @text-color-subtle;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        position: absolute;
+        top: @middle-line-top;
+        width: 100%;
+        z-index: 110;
+    }
+
+    .bottom.block {
+        position: absolute;
+        top: @bottom-block-top;
+        bottom: 0;
+        width: 100%;
+        z-index: 105;
+    }
+
+    .code-annotation-name {
+        color: @text-color-info;
+    }
+
+    .btn {
+        &.disappear, &.edit, &.change-type {
+            float: right;
+            margin: 0 6px;
+        }
+
+        &.delete {
+            background-color: @background-color-error;
+            color: @text-color-error;
+            &:hover {
+                color: lighten(@text-color-error, 10%);
+            }
+        }
+    }
+
+    .content {
+        // overflow: auto;
+
+        .rendered.image-renderer {
+            width: 100%;
+        }
+        .rendered.frame-renderer {
+            border: none;
+            height: 100%;
+            width: 100%;
+        }
+        .rendered.text-renderer {
+            background-color: @app-background-color;
+            border: none;
+            color: @text-color;
+            width: 99%;
+        }
+    }
+}
+
+
+code-annotation-gutter-icon {
+    .octicon(pin);
+    cursor: pointer;
+    text-align: center;
+    width: 14px;
+
+    &:before {
+        font-size: 13px;
+    }
+
+    &.invalid {
+        color: @text-color-error;
+    }
+}

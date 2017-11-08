@@ -1,0 +1,59 @@
+"context-menu":
+    "atom-text-editor": [
+        {
+            "label": "Add annotation (file)"
+            "command": "code-annotations:add-annotation-with-file"
+        }
+        {
+            "label": "Add annotation (content)"
+            "command": "code-annotations:add-annotation-with-content"
+        }
+        {
+            "label": "Add annotation (existing)"
+            "command": "code-annotations:add-existing-annotation"
+        }
+        {
+            "label": "Delete annotation"
+            "command": "code-annotations:delete-annotation"
+        }
+    ]
+"menu": [{
+    "label": "Packages"
+    "submenu": [{
+        "label": "Code Annotations"
+        "submenu": [
+            {
+                "label": "Add (file)"
+                "command": "code-annotations:add-annotation-with-file"
+            }
+            {
+                "label": "Add (content)"
+                "command": "code-annotations:add-annotation-with-content"
+            }
+            {
+                "label": "Add (existing)"
+                "command": "code-annotations:add-existing-annotation"
+            }
+            {
+                "label": "Delete"
+                "command": "code-annotations:delete-annotation"
+            }
+            {
+                "label": "Show all"
+                "command": "code-annotations:show-all"
+            }
+            {
+                "label": "Show commands"
+                "command": "code-annotations:show-commands"
+            }
+            {
+                "label": "Load current editor"
+                "command": "code-annotations:load-current-editor"
+            }
+            {
+                "label": "Reload"
+                "command": "code-annotations:reload"
+            }
+        ]
+    }]
+}]

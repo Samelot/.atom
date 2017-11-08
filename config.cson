@@ -25,6 +25,10 @@
       "welcome"
       "wrap-guide"
       "casefile"
+      "nav-panel"
+      "code-annotations"
+      "symbols-plus"
+      "symbols-view"
     ]
     telemetryConsent: "no"
   editor:
@@ -33,6 +37,11 @@
     tabLength: 4
   "exception-reporting":
     userId: "c093718b-31f0-485b-aa2a-08513e1eb005"
+  minimap:
+    displayCodeHighlights: false
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
   "symbols-tree-nav":
     autoToggle: true
   "todo-show":

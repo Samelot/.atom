@@ -43,3 +43,20 @@ atom-text-editor::shadow .storage.type.class {
 // atom-text-editor:not(.mini)::shadow .punctuation.definition.comment.lua {
 //     background-color: yellow !important;
 // }
+
+atom-text-editor .gutter .bookmarked {
+  background: rgba(0,153,204,.15);
+  padding-right: 1024px; //arbitrary large width
+  pointer-events: none;
+  border-left: 2px solid #09C; //optional gutter decoration
+  z-index: -1;
+  color: rgba(255,255,255,.5);
+  transition: color .1s linear; //smooth transition
+  &.cursor-line {
+    color: #fff;
+  }
+}
+
+.minimap .bookmark {
+  background: #09C;
+}

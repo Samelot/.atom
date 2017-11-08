@@ -46,16 +46,12 @@
         "action": "removed"
       },
       {
-        "name": "comment-anchors",
-        "action": "added"
-      },
-      {
         "name": "expand-region",
         "action": "removed"
       },
       {
         "name": "fold-functions",
-        "action": "removed"
+        "action": "added"
       },
       {
         "name": "fold-navigator",
@@ -72,6 +68,10 @@
       {
         "name": "full-path-in-title-bar",
         "action": "removed"
+      },
+      {
+        "name": "fuzzy-finder",
+        "action": "added"
       },
       {
         "name": "imdone-atom",
@@ -110,7 +110,15 @@
         "action": "removed"
       },
       {
-        "name": "mzlp-bookmark",
+        "name": "minimap",
+        "action": "added"
+      },
+      {
+        "name": "minimap-bookmarks",
+        "action": "added"
+      },
+      {
+        "name": "nav-panel-plus",
         "action": "added"
       },
       {
@@ -139,6 +147,14 @@
       },
       {
         "name": "sublime-word-navigation",
+        "action": "removed"
+      },
+      {
+        "name": "symbols-plus",
+        "action": "removed"
+      },
+      {
+        "name": "symbols-view",
         "action": "removed"
       },
       {
