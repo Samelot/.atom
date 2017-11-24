@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-1171018-13797-umdqq5.twtetawcdi"
+    ]
+  ],
+  "_from": "../d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+  "_id": "autocomplete-corona@1.1.4",
+  "_inCache": true,
+  "_location": "/autocomplete-corona",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+  "_shasum": "27c2ebbfda55bb978bf01a56fdc7aa78317b90a9",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171018-13797-1hdnait.16dhxv42t9/package.tgz",
+  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-1171018-13797-umdqq5.twtetawcdi",
+  "bugs": {
+    "url": "https://github.com/coronalabs/CoronaSDK-AtomPlugin/issues"
+  },
+  "dependencies": {
+    "atom-package-deps": "latest"
+  },
+  "description": "Corona SDK autocomplete package",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/coronalabs/CoronaSDK-AtomPlugin#readme",
+  "keywords": [
+    "lua",
+    "corona",
+    "autocomplete"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "autocomplete-corona",
+  "optionalDependencies": {},
+  "package-deps": [
+    "language-lua"
+  ],
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getAutocompleteProvider"
+      }
+    }
+  },
+  "readme": "# Corona Autocomplete\n\nAn [Atom](https://atom.io) [autocomplete-plus](https://github.com/atom/autocomplete-plus) provider for [Corona SDK](https://coronalabs.com/products/corona-sdk/).\n\n![](https://raw.githubusercontent.com/coronalabs/CoronaSDK-AtomPlugin/master/demo.gif)\n\n## Installation\n\nYou can install the package through Atom's package manager or just run `apm install autocomplete-corona` in your terminal.\n",
+  "readmeFilename": "readme.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coronalabs/CoronaSDK-AtomPlugin.git"
+  },
+  "version": "1.1.4"
+}

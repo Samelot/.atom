@@ -15,16 +15,6 @@
 @helloConsole.icon = 'ion-clipboard' # icon from https://atom.io/packages/toolbar#supported-icon-sets
 @helloConsole.title = 'Hello Console!'
 
-
-
-` // If you prefer Javascript, write it between backticks.
-this.helloFromJS = function() {
-    console.log('Hello from JS');
-    alert('Watch your console! (open with alt-cmd-i)');
-}
-this.helloFromJS.hideIcon = true; // don't show this on the toolbar
-`
-
 # Every property on "this" which is not a function triggers a separator
 @sp1 = "----------------"
 
@@ -74,14 +64,13 @@ this.helloFromJS.hideIcon = true; // don't show this on the toolbar
 
 @onUnload = ->
     undefined # called, when the macros have been unloaded, i.e. when Atom stopped
-
+###
 @samup = ->
     e = atom.workspace.getActiveTextEditor()
     cursorColumn = e.getCursorBufferPosition().column
 
     # for cursor in e.getCursors()
     #   cursor.moveLeft() unless cursor.isAtBeginningOfLine()
-
 
     bufferPosition = e.getCursorBufferPosition()
     line = e.lineTextForBufferRow(bufferPosition.row)
@@ -103,7 +92,11 @@ this.helloFromJS.hideIcon = true; // don't show this on the toolbar
 
     # dispatchEditorCommand 'core:move-up'
     # dispatchEditorCommand 'editor:move-to-end-of-screen-line'
+###
 
-@samdown = ->
-    dispatchEditorCommand 'core:move-down'
-    dispatchEditorCommand 'editor:move-to-end-of-screen-line'
+@coronaSimulatorKill = ->
+    dispatchWorkspaceCommand 'process-palette:kill-and-remove-focused-process'
+    dispatchWorkspaceCommand 'process-palette:hide'
+
+@areMacrosWorking = ->
+    dispatchEditorCommand 'core:move-up'

@@ -1,15 +1,16 @@
 "*":
+  "bottom-dock":
+    startOpen: true
   core:
+    destroyEmptyPanes: false
     disabledPackages: [
       "about"
-      "atom-cursor-indent"
       "atom-jump-block"
       "auto-fold"
       "background-tips"
       "code-peek"
       "codesidestory-atom"
       "expand-region"
-      "foldingtext-for-atom"
       "full-path-in-title-bar"
       "jumpy"
       "language-todo"
@@ -25,23 +26,40 @@
       "welcome"
       "wrap-guide"
       "casefile"
-      "nav-panel"
       "code-annotations"
-      "symbols-plus"
       "symbols-view"
+      "github"
+      "folded-code-preview"
+      "atom-cursor-indent"
+    ]
+    packagesWithKeymapsDisabled: [
+      "github"
     ]
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
     softWrap: true
     tabLength: 4
+  "env-from-shell":
+    autoRun: true
   "exception-reporting":
     userId: "c093718b-31f0-485b-aa2a-08513e1eb005"
+  "git-diff":
+    showIconsInEditorGutter: true
   minimap:
-    displayCodeHighlights: false
+    displayMinimapOnLeft: true
     plugins:
       bookmarks: true
       bookmarksDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  "process-palette":
+    palettePanel:
+      showCommand: false
+      showOutputTarget: false
+  "run-command": {}
   "symbols-tree-nav":
     autoToggle: true
   "todo-show":

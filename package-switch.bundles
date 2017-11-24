@@ -22,6 +22,10 @@
         "action": "removed"
       },
       {
+        "name": "autocomplete-corona",
+        "action": "added"
+      },
+      {
         "name": "background-tips",
         "action": "removed"
       },
@@ -54,15 +58,7 @@
         "action": "added"
       },
       {
-        "name": "fold-navigator",
-        "action": "added"
-      },
-      {
         "name": "folded-code-preview",
-        "action": "added"
-      },
-      {
-        "name": "foldingtext-for-atom",
         "action": "removed"
       },
       {
@@ -72,6 +68,10 @@
       {
         "name": "fuzzy-finder",
         "action": "added"
+      },
+      {
+        "name": "github",
+        "action": "removed"
       },
       {
         "name": "imdone-atom",
@@ -118,6 +118,14 @@
         "action": "added"
       },
       {
+        "name": "minimap-find-and-replace",
+        "action": "added"
+      },
+      {
+        "name": "minimap-highlight-selected",
+        "action": "added"
+      },
+      {
         "name": "nav-panel-plus",
         "action": "added"
       },
@@ -134,6 +142,10 @@
         "action": "added"
       },
       {
+        "name": "process-palette",
+        "action": "added"
+      },
+      {
         "name": "recent-files-fuzzy-finder",
         "action": "added"
       },
@@ -147,10 +159,6 @@
       },
       {
         "name": "sublime-word-navigation",
-        "action": "removed"
-      },
-      {
-        "name": "symbols-plus",
         "action": "removed"
       },
       {
