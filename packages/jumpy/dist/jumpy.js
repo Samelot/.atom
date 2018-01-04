@@ -20,8 +20,7 @@ module.exports = {
         },
         useHomingBeaconEffectOnJumps: {
             description: 'This will animate a short lived homing beacon upon \
-            jump.  It is *temporarily* not working due to architectural \
-            changes in Atom.',
+            jump.',
             type: 'boolean',
             default: true
         },
@@ -29,6 +28,11 @@ module.exports = {
             description: 'Jumpy will create labels based on this pattern.',
             type: 'string',
             default: '([A-Z]+([0-9a-z])*)|[a-z0-9]{2,}'
+        },
+        customKeys: {
+            description: 'Jumpy will use these characters in the specifed order to create labels (comma separated)',
+            type: 'array',
+            default: []
         }
     },
     activate(state) {

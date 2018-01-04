@@ -21,7 +21,8 @@
       "BACKLOG",
       "READY",
       "ICEBOX",
-      "INBOX"
+      "INBOX",
+      "I"
     ]
   },
   "lists": [
@@ -42,7 +43,7 @@
       "hidden": true
     },
     {
-      "name": "DONE",
+      "name": "REVIEW",
       "hidden": false
     },
     {
@@ -62,16 +63,16 @@
     "smartLists": true,
     "langPrefix": "language-"
   },
+  "sync": {
+    "id": "5a11044eb01d742c3c4f516a",
+    "name": "imdone/imdone-atom",
+    "useImdoneioForPriority": true
+  },
   "meta": {
     "gh": {
       "urlTemplate": "https://github.com/imdone/imdone-atom/issues/%s",
       "titleTemplate": "View github issue %s",
       "icon": "icon-octoface"
     }
-  },
-  "sync": {
-    "id": "586bcdf521a4015bf98226ca",
-    "name": "imdone-atom",
-    "useImdoneioForPriority": true
   }
 }

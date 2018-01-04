@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
+        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
-        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
+        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
+        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117108-66014-1n2xmni.a5fgk3xr"
+      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-1171125-33265-1tdfb6f.c6y00ms4i"
     ]
   ],
-  "_from": "../d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
-  "_id": "jumpy@4.1.1",
+  "_from": "../d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
+  "_id": "jumpy@4.2.0",
   "_inCache": true,
   "_location": "/jumpy",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
+    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
-    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
+    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
+    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
-  "_shasum": "340a8ac1d7b17928332097e1bdc121b459ef0cf4",
+  "_resolved": "file:../d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
+  "_shasum": "fe8257f8bd10af17a43211e0dccdba2073815bb1",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117108-66014-n5w45v.de8yiltyb9/package.tgz",
-  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117108-66014-1n2xmni.a5fgk3xr",
+  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171125-33265-1nobict.6wnk9jxlxr/package.tgz",
+  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-1171125-33265-1tdfb6f.c6y00ms4i",
   "bugs": {
     "url": "https://github.com/DavidLGoldberg/jumpy/issues"
   },
@@ -78,5 +78,5 @@
     "type": "git",
     "url": "git+https://github.com/DavidLGoldberg/jumpy.git"
   },
-  "version": "4.1.1"
+  "version": "4.2.0"
 }

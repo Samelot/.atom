@@ -14,14 +14,14 @@ _ = null
 config = require '../services/imdone-config'
 envConfig = require '../../config'
 
-# #BACKLOG: Add keen stats for features
+# #BACKLOG: Add keen stats for features id:8 gh:240
 module.exports =
 class ImdoneAtomView extends ScrollView
 
   class PluginViewInterface extends Emitter
     constructor: (@imdoneView)->
       super()
-    emitter: -> @ # CHANGED: deprecated
+    emitter: -> @ # CHANGED: deprecated id:14 gh:245
     selectTask: (id) ->
       @imdoneView.selectTask id
     showPlugin: (plugin) ->
@@ -43,7 +43,6 @@ class ImdoneAtomView extends ScrollView
     Sortable = require 'sortablejs'
     pluginManager = require '../services/plugin-manager'
     fileService = require '../services/file-service'
-    @client = require('../services/imdoneio-client').instance
     log = require '../services/log'
     _ = require 'lodash'
     require('./jq-utils')($)
@@ -148,17 +147,19 @@ class ImdoneAtomView extends ScrollView
       @hideMask() if status == "unavailable" && retries
       #console.log "auth-failed" if status == "failed"
 
+    @emitter.on 'authenticated', => pluginManager.init()
+
     @emitter.on 'unavailable', =>
       @hideMask()
       atom.notifications.addInfo "#{envConfig.name} is unavailable", detail: "Click login to retry", dismissable: true, icon: 'alert'
 
 
-    @emitter.on 'tasks.syncing', => @showMask "Syncing with #{envConfig.name}..."
+    # @emitter.on 'tasks.syncing', => @showMask "Syncing with #{envConfig.name}..."
 
     @emitter.on 'sync.error', => @hideMask()
 
     @emitter.on 'tasks.updated', (tasks) =>
-      @onRepoUpdate(tasks) # DOING: For UI performance only update the lists that have changed. +enhancement gh:205
+      @onRepoUpdate(tasks) # TODO: For UI performance only update the lists that have changed. +enhancement gh:205 id:44
 
     @emitter.on 'initialized', =>
       @addPlugin(Plugin) for Plugin in pluginManager.getAll()
@@ -173,7 +174,7 @@ class ImdoneAtomView extends ScrollView
 
     @emitter.on 'tasks.moved', (tasks) =>
       #console.log 'tasks.moved', tasks
-      @onRepoUpdate(tasks) # TODO: For performance maybe only update the lists that have changed
+      @onRepoUpdate(tasks) # TODO: For performance maybe only update the lists that have changed id:35 gh:259
 
     @emitter.on 'config.update', =>
       #console.log 'config.update'
@@ -181,9 +182,9 @@ class ImdoneAtomView extends ScrollView
 
     @emitter.on 'error', (mdMsg) => atom.notifications.addWarning "OOPS!", description: mdMsg, dismissable: true, icon: 'alert'
 
-    @emitter.on 'task.modified', (task) =>
+    @emitter.on 'task.modified', (task) => @onRepoUpdate()
       #console.log "Task modified.  Syncing with imdone.io"
-      @imdoneRepo.syncTasks [task], (err) => @onRepoUpdate()
+      # @imdoneRepo.syncTasks [task], (err) => @onRepoUpdate()
 
     @emitter.on 'menu.toggle', =>
       @boardWrapper.toggleClass 'shift'
@@ -216,14 +217,12 @@ class ImdoneAtomView extends ScrollView
         @hideMask()
 
     @emitter.on 'readme.open', =>
-      file = _.get @imdoneRepo.getDefaultFile(), 'path'
+      file = @imdoneRepo.getReadme()
       unless file
         @emitter.emit 'error', 'Sorry no readme :('
         return
       else
         @openPath @imdoneRepo.getFullPath(file)
-
-    # @emitter.on 'repo.change', => @showMask "Loading TODOs..."
 
     @emitter.on 'config.close', =>
       @boardWrapper.removeClass 'shift-bottom'
@@ -238,7 +237,7 @@ class ImdoneAtomView extends ScrollView
 
     @emitter.on 'zoom', (dir) => @zoom dir
 
-    $('body').on 'click', '.source-link',  (e) =>
+    @on 'click', '.source-link',  (e) =>
       link = e.target
       @openPath link.dataset.uri, link.dataset.line
 
@@ -279,6 +278,15 @@ class ImdoneAtomView extends ScrollView
       filterAry.shift()
       filter = filterAry.join '/' ;
       @setFilter filter
+
+    @on 'change', 'ul.checklist>li>input[type=checkbox]', (e) =>
+      target = e.target
+      $task = target.closest('.task')
+      taskId = $task.id
+      items = $task.querySelectorAll('.task-description .checklist-item')
+      [].forEach.call items, (el) ->
+        if (el.checked) then el.setAttribute('checked', true) else el.removeAttribute('checked') 
+      repo.modifyTaskFromHtml repo.getTask(taskId), $task.querySelector('.task-text').innerHTML
 
     pluginManager.emitter.on 'plugin.added', (Plugin) =>
       if (repo.getConfig())
@@ -414,7 +422,7 @@ class ImdoneAtomView extends ScrollView
       item.destroy()
 
   onRepoUpdate: (tasks) ->
-    # BACKLOG: This should be queued so two updates don't colide
+    # BACKLOG: This should be queued so two updates don't colide id:9 gh:241
     @updateBoard(tasks)
     @boardWrapper.css 'bottom', 0
     @bottomView.attr 'style', ''
@@ -443,14 +451,13 @@ class ImdoneAtomView extends ScrollView
     dateDue = task.getDateDue()
     dateCreated = task.getDateCreated()
     dateCompleted = task.getDateCompleted()
-    opts = $.extend {}, {stripMeta: true, stripDates: true, sanitize: true}, repo.getConfig().marked
-    taskHtml = task.getHtml(opts)
-    showTagsInline = config.getSettings().showTagsInline
-    $taskText = $el.div class: 'task-text'
+    $taskText = $el.div class: 'task-text native-key-bindings'
     $filters = $el.div()
     $taskMetaTable = $el.table()
     $taskMeta = $el.div class: 'task-meta', $taskMetaTable
-
+    opts = $.extend {}, {stripMeta: true, stripDates: true, sanitize: true}, repo.getConfig().marked
+    taskHtml = task.getHtml(opts)
+    showTagsInline = config.getSettings().showTagsInline
     if showTagsInline
       if contexts
         for context, i in contexts
@@ -464,6 +471,7 @@ class ImdoneAtomView extends ScrollView
             $link = @genFilterLink linkPrefix: "+", linkText: tag, linkClass: "task-tags", displayPrefix: true
             taskHtml = taskHtml.replace( "+#{tag}", $el.div($link).innerHTML )
     else
+      taskHtml = task.getHtml $.extend({stripTags: true, stripContext: true}, opts)
       if contexts
         $div = $el.div()
         $filters.appendChild $div
@@ -481,14 +489,6 @@ class ImdoneAtomView extends ScrollView
 
     $taskText.innerHTML = taskHtml
 
-    if dateDue
-      $tr = $el.tr class:'meta-data-row',
-        $el.td "due"
-        $el.td dateDue
-        $el.td class: 'meta-filter',
-          $el.a href:"#", title: "filter by due:#{dateDue}", class: "filter-link", "data-filter": "due:#{dateDue}",
-            $el.span class:"icon icon-light-bulb"
-      $taskMetaTable.appendChild $tr
     if dateCreated
       $tr = $el.tr class:'meta-data-row',
         $el.td "created"
@@ -525,7 +525,7 @@ class ImdoneAtomView extends ScrollView
 
     $el.li class: 'task well native-key-bindings', id: "#{task.id}", tabindex: -1, "data-path": task.source.path, "data-line": task.line,
       $el.div class: 'imdone-task-plugins'
-      $el.div class: 'task-full-text hidden', task.rawTask
+      $el.div class: 'task-full-text hidden', task.getTextAndDescription()
       $taskText
       $filters
       $taskMeta
@@ -601,9 +601,9 @@ class ImdoneAtomView extends ScrollView
     @emitter.emit 'board.update'
 
 
-  # BACKLOG: Split this apart into it's own class to simplify. Call it BoardView +refactor
+  # BACKLOG: Split this apart into it's own class to simplify. Call it BoardView +refactor id:15 gh:246
   updateBoard: (tasks) ->
-    # DOING: Only update board with changed tasks gh:205 +master
+    # TODO: Only update board with changed tasks gh:205 +master id:45
     # return if @updateTasksOnBoard tasks
     self = @
     @destroySortables()
@@ -656,7 +656,6 @@ class ImdoneAtomView extends ScrollView
     @emitter.on 'did-destroy', callback
 
   openPath: (filePath, line) ->
-    # DOING: Fix issue with multiple tabs of same file opening gh:225
     return unless filePath
 
     fileService.openFile @path, filePath, line, (success) =>

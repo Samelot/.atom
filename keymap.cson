@@ -5,6 +5,7 @@
 
 '.platform-darwin':
     'cmd-.': 'unset!'
+    'cmd-b': 'fuzzy-finder:toggle-buffer-finder'
 
 '.platform-darwin atom-text-editor':
     'cmd-f3': 'unset!'
@@ -13,7 +14,7 @@
 '.platform-darwin .find-and-replace':
     'escape': 'custom:cancel'
 
-'.platform-darwin .command-palette atom-text-editor':
+'.platform-darwin .command-palette, .fuzzy-finder, .recent-files-fuzzy-finder':
     'escape': 'core:cancel'
 
 'atom-workspace atom-text-editor:not([mini])':
@@ -21,8 +22,8 @@
     'escape': 'editor:consolidate-selections'
 
 'atom-workspace':
-    'f3': 'todo-show:toggle'
-    'cmd-f3': 'process-palette:toggle'
+    'f3': 'process-palette:toggle'
+    'cmd-f3': 'todo-show:toggle'
     'shift-f3': 'minimap:toggle'
     'shift-f5': 'macros:coronaSimulatorKill'
     'ctrl-shift-t': 'unset!'

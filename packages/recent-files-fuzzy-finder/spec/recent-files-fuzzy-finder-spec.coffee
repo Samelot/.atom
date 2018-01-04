@@ -1,7 +1,6 @@
 _ = require 'underscore-plus'
 fs = require 'fs-extra'
 path = require 'path'
-shell = require 'shell'
 temp = require 'temp'
 
 describe "RecentFilesFuzzyFinder", ->
@@ -160,13 +159,21 @@ describe "RecentFilesFuzzyFinder", ->
           expect(_.pluck(Array.from(recentFilesView.element.querySelectorAll('li > div.file')), 'outerText')).toEqual ['sample-with-tabs.coffee', 'sample.txt', 'sample.js']
         waitsForPromise ->
           recentFilesView.toggle()
+
+        # should clear cache
         runs ->
           dispatchCommand('remove-closed-files')
 
+        # re-open
         waitsForPromise ->
           recentFilesView.toggle()
         runs ->
-          expect(atom.workspace.panelForItem(recentFilesView).isVisible()).toBe false
+          expect(atom.workspace.panelForItem(recentFilesView).isVisible()).toBe true
+          expect(recentFilesView.element.outerText.trim()).toContain 'No files'
+
+        # close again
+        waitsForPromise ->
+          recentFilesView.toggle()
 
         waitsForPromise ->
           atom.workspace.open 'sample.js'
@@ -188,9 +195,9 @@ describe "RecentFilesFuzzyFinder", ->
         atom.workspace.open 'sample-with-tabs.coffee'
 
     it 'does not show the deleted file anymore', ->
-      shell.moveItemToTrash path.join(rootDir1, 'sample.txt')
+      fs.unlink path.join(rootDir1, 'sample.txt')
 
-      waitsFor "file to be deleted", 300, ->
+      waitsFor "file to be deleted", 500, ->
         recentFilesView.toggle()
         _.pluck(Array.from(recentFilesView.element.querySelectorAll('li > div.file')), 'outerText').length is 1
 

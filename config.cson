@@ -34,6 +34,7 @@
     ]
     packagesWithKeymapsDisabled: [
       "github"
+      "recent-files-fuzzy-finder"
     ]
     telemetryConsent: "no"
   editor:

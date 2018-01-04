@@ -1,3 +1,28 @@
+## 2.3.24
+- Live checklist support.  Update TODO checklists from your board.
+
+## 2.3.21
+- Better rules for task descriptions in non code files
+
+## 2.3.20
+- Add following lines as task description
+
+## 2.3.19
+- Add All list names found in non-code files
+
+## 2.3.9
+- Add list to include_lists
+- Only run refresh once
+
+## 2.3.8
+- Fix task text on TODOs with sort order
+
+## 2.3.7
+- Fix readme opening when readme is ignored
+
+## 2.3
+- Performance improvement.  Run watcher in forked process
+
 ## 2.2.8
 - Add flow-typed directory to DEFAULT_EXCLUDES @johnhaley81
 
@@ -476,4 +501,4 @@
 
 ----
 
-#TODO: Remember to update changelog before +publishing +package @piascikj
+#TODO: Remember to update changelog before +publishing +package @piascikj id:0 gh:237
