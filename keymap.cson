@@ -28,7 +28,7 @@
     'f3': 'todo-show:toggle'
     'cmd-f3': 'process-palette:toggle'
     'shift-f3': 'minimap:toggle'
-    'shift-f5': 'macros:edit-macros'
+    'shift-f5': 'macros:coronaSimulatorKill'
     'ctrl-shift-t': 'unset!'
     'cmd-.': 'application:open-your-keymap'
     'cmd-shift-.': 'application:open-your-config'
