@@ -1,93 +1,134 @@
 # Code Annotations ([Atom](http://atom.io) package)
 
-## Description
-
 This is an atom package for creating code annotations.
-An annotation is a piece of content that has a name and can be displayed in atom.
-While working only the name of the code annotation is visible but it can be shown by clicking on the pin icon (in the atom gutter)
+An annotation is a piece of content with a title that can be displayed in [Atom](https://atom.io/).
+Code Annotations will not show up in your code but can nonetheless be used along with a VCS.
+
+An advantage over `v2.x` is that annotations no longer depend on code comments meaning you can effectively comment code that does not have a comment syntax (e.g. [comments in package.json](https://github.com/npm/npm/issues/4482)).
+Annotations appear as icons in the Atom gutter and can be revealed by clicking these icons.
 
 ![Basic usage](https://github.com/jneuendorf/code-annotations/raw/master/gifs/basic-usage.gif)
 
-By default, this package can render the following kinds of content:
+By default, this package can render the 4 [types](#types) of content.
+Further renderers can be added by
 
-- images
-- html
-- links / URLs
-- plain text
-
-Further renderers can be added by installing code-annotation plugin packages.
+- installing code-annotation plugin packages (for versions `v2.x` see the [example plugin](https://github.com/jneuendorf/code-annotations-test)) or
+- creating Pull Requests.
 
 
 ## Usage
 
-### Creation and destruction
+### Basics
 
-Code annotations can be added and deleted from the context menu, from the `ShowCommandsView`, and of course from the command palette.
-When adding or removing the position is the current (or last) cursor is relevant (so just right clicking to a certain position is insufficient (for now)).
-A new annotation is added above the line of the cursor; for deleting one the cursor must be at the annotation's line.
+Code annotations can be added from the packages menu and of course from the command palette.
+New annotations are added to the current cursor's line by default (it can be changed in one of the dialogs if needed).
 
-Each annotation is identified by a name (so it must be unique among all annotations of the same project folder).
+Multiple annotations can be attached to the same line. So explanation and images can be used together for the same chunk of code.
 
-When creating an annotation its contents can be set in 2 ways:
-
-1. from a file (for e.g. images)
-2. from text input (for e.g. plain text)
-	- All annotations from text input are displayed as plain text first. The type can be changed later.
+All annotations are saved in `.annotations.cson` in the project root.
+In `v2.x` there were stored in a `.code-annotations` directory.
+If such an "old" directory exists it should be detected and you should run the `migrate` command (see [commands](#commands)).
 
 
-### Navigating to annotations
+### <a name="types"></a>Types of annotations
 
-With the `show-all` command a select list containing all package commands
+#### `image`
+
+Renders images as `<img>` tags (currently supports png, gif, jpg and bmp).
+
+#### `html`
+
+Renders HTML as you would expect - the web way of rich text.
+
+#### `link`
+
+Renders the web page belonging to a URL.
+
+Project relative files can be displayed by using a file URL starting with `file://$NAME` where `$NAME` is a placeholder for the project named `NAME`.
+
+#### `text`
+
+Renders plain text.
 
 
-### Shortcuts
+### <a name="commands"></a>Commands, shortcuts
 
-There are only 2: `ctrl-alt-c ctrl-alt-c` and `escape`.
+| Command | Shortcut | Description |
+|---------|----------|-------------|
+| `add-annotation` | | Adds an annotation. Data is input using some dialogs. |
+| `show-all` | | Displays all annotations of the current project. Choosing one opens the corresponding file at the annotated line. |
+| `edit-raw` | | Opens `.annotations.cson` for editing annotations manually. |
+| `hide-container` | `escape` | Hides/closes the annotation container. |
+| `select-previous-annotation` | `up` | Displays the previous annotation in the list. |
+| `select-next-annotation` | `down` | Displays the next annotation in the list. |
+| `move-annotation-up` | `cmd-up` / `ctrl-up` | Moves the currently selected annotation up the list. |
+| `move-annotation-down` | `cmd-down` / `ctrl-down` | Moves the currently selected annotation down the list. |
+| `show-qr-code` | | Shows the QR code that's required for the [mobile app](#app). |
+| `migrate` | | Migrates annotation data from `v2` to `v3`. |
 
-Yes, the first is what it looks like - `ctr-alt-c` twice in a row.
-This shortcut shows a select list with the commands of the package (so this is kinda like a prefiltered command palette).
-
-`escape` is for hiding the container (see next section).
-
-The reasoning behind this is to avoid conflicts with other packages without making it harder to use the package without the mouse.
+(`cmd` is used for macOS, `ctrl` for Linux and Windows.)
 
 
 ### Showing annotations (rendering)
 
-Each annotation is associated with a file. The file extension of that file determines how the file contents are rendered in the popup (called `CodeAnnotationContainer`).
-Thus the `hide-container` command (which is triggered on `escape`).
-
-The container is made visible by clicking on the icon displayed in the [gutter](https://atom.io/docs/api/latest/Gutter) - currently this is a pin icon.
+The container is made visible by clicking on the icon displayed in the [gutter](https://atom.io/docs/api/latest/Gutter) - a pin icon by default.
+The `hide-container` command closes it (which is triggered on `escape`).
 
 
-## Supported grammars
+## <a name="commands"></a>Mobile App
 
-- [C](https://atom.io/packages/language-c)
-- [C#](https://atom.io/packages/language-csharp)
-- [CoffeeScript](https://atom.io/packages/language-coffee-script)
-- [CSS](https://atom.io/packages/language-css)
-- [C++](https://atom.io/packages/language-c)
-- [GitHub Flavored Markdown](https://atom.io/packages/language-gfm)
-- [Go](https://atom.io/packages/language-go)
-- [Haskell](https://atom.io/packages/language-haskell)
-- [HTML](https://atom.io/packages/language-html)
-- [HTML (Ruby - ERB)](https://atom.io/packages/language-ruby)
-- [Java](https://atom.io/packages/language-java)
-- [JavaScript](https://atom.io/packages/language-javascript)
-- [LaTeX](https://atom.io/packages/language-latex)
-- [Less](https://atom.io/packages/language-less)
-- [MATLAB](https://atom.io/packages/language-matlab)
-- [Objective-C](https://atom.io/packages/language-objective-c)
-- [Objective-C++](https://atom.io/packages/language-objective-c)
-- [Octave](https://atom.io/packages/language-matlab)
-- [Perl](https://atom.io/packages/language-perl)
-- [Perl 6](https://atom.io/packages/language-perl)
-- [PHP](https://atom.io/packages/language-php)
-- [Python](https://atom.io/packages/language-python)
-- [R](https://atom.io/packages/language-r)
-- [Ruby](https://atom.io/packages/language-ruby)
-- [Sass](https://atom.io/packages/language-sass)
-- [Scala](https://atom.io/packages/language-scala)
-- [SCSS](https://atom.io/packages/language-scss)
-- [Shell Script](https://atom.io/packages/language-shellscript)
-- [SQL](https://atom.io/packages/language-sql)
+There is a mobile app belonging to this Atom package.
+It is located in the `AtomCodeAnnotations` folder.
+
+The app can be used for taking photos.
+These photos can then be sent to Atom as code annotations.
+In order for the app to send the photo it needs to know an IP address which it gets by reading the QR code that can be shown with the `show-qr-code` command.
+
+### Distribution
+
+#### iOS
+
+The app should be deployable using Apple's *Ad Hoc Distribution*.
+
+#### Android
+
+TODO. These links look helpful though:
+
+- https://stackoverflow.com/questions/35935060/
+- https://facebook.github.io/react-native/docs/signed-apk-android.html
+
+
+## Changelog (since `v2.x`)
+
+See [releases](https://github.com/jneuendorf/code-annotations/releases).
+
+
+## Contribution
+
+### Setting up the package
+
+```bash
+apm develop code-annotations
+cd ~/github/code-annotations
+atom . --dev
+```
+
+or
+
+```bash
+git clone https://github.com/jneuendorf/code-annotations.git
+cd code-annotations
+apm link
+atom .
+# or
+# apm link --dev
+# atom . --dev
+```
+
+### Thanks to
+
+- [edahlseng](https://github.com/edahlseng)
+  for the motivation that led to `v3.0` and ideas for improving quality and
+  performance of the package.
+- [bradleyDean](https://github.com/bradleyDean)
+  for feedback and inspiration

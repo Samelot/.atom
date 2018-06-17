@@ -1,3 +1,16 @@
+# v1.10.8 [#](https://github.com/idleberg/atom-browse/releases/tag/v1.10.8)
+
+- fix `anonymizerIP` parameter
+
+# v1.10.7 [#](https://github.com/idleberg/atom-browse/releases/tag/v1.10.7)
+
+- update default GA parameters
+- update dependencies
+
+# v1.10.6 [#](https://github.com/idleberg/atom-browse/releases/tag/v1.10.6)
+
+- fix variable name
+
 # v1.10.5 [#](https://github.com/idleberg/atom-browse/releases/tag/v1.10.5)
 
 - reduce whitespace

@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
+        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
-        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
+        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
+        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117106-13193-bik17d.jtkm8zd7vi"
+      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-118315-3988-y8vaao.r7huygmn29"
     ]
   ],
-  "_from": "../d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
-  "_id": "casefile@1.0.0",
+  "_from": "../d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
+  "_id": "casefile@1.1.2",
   "_inCache": true,
   "_location": "/casefile",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
+    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
-    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
+    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
+    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
-  "_shasum": "5ea4ff2ad16170e0ad690d6c85075bd075b6b37b",
+  "_resolved": "file:../d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
+  "_shasum": "04ba78d60b6aaf12ffd4b5deea6e91ed96f1f72c",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-13193-1t50f8z.ip0ayeewmi/package.tgz",
-  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117106-13193-bik17d.jtkm8zd7vi",
+  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-3988-1ny3g3x.awlxvzehfr/package.tgz",
+  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-118315-3988-y8vaao.r7huygmn29",
   "activationCommands": {
     "atom-workspace": [
       "casefile:add-bookmark",
@@ -46,11 +46,10 @@
     "url": "https://github.com/rtweeks/casefile/issues"
   },
   "dependencies": {
+    "etch": "^0.12.8",
     "flux": "^3.1.3",
     "jquery": "^3.2.1",
     "marked": "^0.3.6",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
     "tempy": "^0.1.0"
   },
   "description": "Bookmarks package for programmer-archeologists",
@@ -75,5 +74,5 @@
     "type": "git",
     "url": "git+https://github.com/rtweeks/casefile.git"
   },
-  "version": "1.0.0"
+  "version": "1.1.2"
 }

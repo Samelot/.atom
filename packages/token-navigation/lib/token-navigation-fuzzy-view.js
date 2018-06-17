@@ -1,5 +1,5 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import { h, Component } from 'preact'
+import { connect } from 'preact-redux'
 import fuzzy from 'fuzzy'
 import classNames from 'classnames'
 
@@ -16,11 +16,11 @@ import {
 const FuzzyTokenWrapper = ({ visible }) =>
 	visible ? <EnhancedFuzzyToken /> : null
 
-module.exports = connect(state => ({
+export default connect(state => ({
 	visible: isVisible(state)
 }))(FuzzyTokenWrapper)
 
-class FuzzyToken extends React.PureComponent {
+class FuzzyToken extends Component {
 	constructor(props) {
 		super(props)
 		this.search = this.search.bind(this)
@@ -147,9 +147,7 @@ class FuzzyToken extends React.PureComponent {
 				>
 					<div className={findAndReplaceClassNames}>
 						<header className="header">
-							<span className="header-item description">
-								{header}
-							</span>
+							<span className="header-item description">{header}</span>
 						</header>
 						<section
 							style={{ justifyContent: 'center' }}

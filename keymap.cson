@@ -2,10 +2,13 @@
 'body':
     'cmd-shift-t': 'unset!'
     'escape': 'unset!'
+    'ctrl-alt-cmd-m': 'unset!'
 
 '.platform-darwin':
     'cmd-.': 'unset!'
+    'ctrl-0': 'unset!'
     'cmd-b': 'fuzzy-finder:toggle-buffer-finder'
+
 
 '.platform-darwin atom-text-editor':
     'cmd-f3': 'unset!'
@@ -22,13 +25,15 @@
     'escape': 'editor:consolidate-selections'
 
 'atom-workspace':
-    'f3': 'process-palette:toggle'
-    'cmd-f3': 'todo-show:toggle'
+    'f3': 'todo-show:toggle'
+    'cmd-f3': 'process-palette:toggle'
     'shift-f3': 'minimap:toggle'
-    'shift-f5': 'macros:coronaSimulatorKill'
+    'shift-f5': 'macros:edit-macros'
     'ctrl-shift-t': 'unset!'
     'cmd-.': 'application:open-your-keymap'
     'cmd-shift-.': 'application:open-your-config'
+    'cmd-\\': 'tree-view:toggle-focus'
+    # 'ctrl-alt-cmd-m': 'macros:blenderBlogging_SaveCloseTreeDown'
 
 #needed when in editor
 # '.workspace .editor:not(.mini)':

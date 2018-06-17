@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-19378-7kxty0.wmxnu3di/package.tgz",
+        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118517-11710-ujsj73.ri3eg66r/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-19378-7kxty0.wmxnu3di/package.tgz",
-        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-19378-7kxty0.wmxnu3di/package.tgz",
+        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118517-11710-ujsj73.ri3eg66r/package.tgz",
+        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118517-11710-ujsj73.ri3eg66r/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117106-19378-1c0sj22.ppzic9dx6r"
+      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-118517-11710-18w8dj.xfr8d50zfr"
     ]
   ],
-  "_from": "../d-117106-19378-7kxty0.wmxnu3di/package.tgz",
+  "_from": "../d-118517-11710-ujsj73.ri3eg66r/package.tgz",
   "_id": "atom-macros@0.5.2",
   "_inCache": true,
   "_location": "/atom-macros",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-19378-7kxty0.wmxnu3di/package.tgz",
+    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118517-11710-ujsj73.ri3eg66r/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-19378-7kxty0.wmxnu3di/package.tgz",
-    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-19378-7kxty0.wmxnu3di/package.tgz",
+    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118517-11710-ujsj73.ri3eg66r/package.tgz",
+    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118517-11710-ujsj73.ri3eg66r/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117106-19378-7kxty0.wmxnu3di/package.tgz",
+  "_resolved": "file:../d-118517-11710-ujsj73.ri3eg66r/package.tgz",
   "_shasum": "8a80b58a7768dd5b821150078d6a3e9a2188da2c",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-19378-7kxty0.wmxnu3di/package.tgz",
-  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117106-19378-1c0sj22.ppzic9dx6r",
+  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118517-11710-ujsj73.ri3eg66r/package.tgz",
+  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-118517-11710-18w8dj.xfr8d50zfr",
   "bugs": {
     "url": "https://github.com/pbihler/atom-macros/issues"
   },

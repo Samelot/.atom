@@ -100,3 +100,8 @@
 
 @areMacrosWorking = ->
     dispatchEditorCommand 'core:move-up'
+
+# @blenderBlogging_SaveCloseTreeDown = ->
+    # dispatchWorkspaceCommand 'core:save'
+    # dispatchWorkspaceCommand 'core:close'
+    # dispatchEditorCommand 'tree-view:toggle-focus'

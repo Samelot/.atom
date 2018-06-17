@@ -127,7 +127,7 @@
       },
       {
         "name": "nav-panel-plus",
-        "action": "added"
+        "action": "removed"
       },
       {
         "name": "organized",
@@ -140,6 +140,10 @@
       {
         "name": "package-switch",
         "action": "added"
+      },
+      {
+        "name": "pigments",
+        "action": "removed"
       },
       {
         "name": "process-palette",
@@ -155,6 +159,10 @@
       },
       {
         "name": "sourcerer",
+        "action": "removed"
+      },
+      {
+        "name": "status-bar",
         "action": "removed"
       },
       {
@@ -176,6 +184,10 @@
       {
         "name": "token-navigation",
         "action": "removed"
+      },
+      {
+        "name": "two-light-ui",
+        "action": "added"
       },
       {
         "name": "welcome",

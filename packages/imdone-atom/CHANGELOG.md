@@ -1,3 +1,119 @@
+## 2.4.28
+- Add allTags, allContext and allMeta
+
+## 2.4.27
+- Add frontMatter
+
+## 2.4.26
+- Fix regex dependency in imdone-core
+
+## 2.4.25
+- Only replace visible tasks on move
+
+## 2.4.24
+- Maintain board view after moving a task to improve performance and usability.
+
+## 2.4.22
+- fix hide mask when showing tasks after filter
+
+## 2.4.21
+- use filter property in autocreate and autocomplete transformers
+
+## 2.4.20
+- Allow filtering of task properties "created", "completed", "due" and "remind" as dates (e.g. "gt(due,date:2018-04-20)")
+
+## 2.4.19
+- Move tasks to bottom and top with one click
+
+## 2.4.18
+- Use filter by string.search on rawTask as fallback to rql
+
+## 2.4.17
+- Fix filter syntax error
+
+## 2.4.16
+- Provide data-key and data-value in metadata rows for plugins or custom css. e.g. `tr.meta-data-row[data-key=gh]`
+- When filtering only show lists with tasks and ignored lists
+- Highlight the current filter link in tasks
+
+## 2.4.15
+- Allow user to select text in cards by adding a drag handle
+
+## 2.4.13
+- Fix in-line tags
+
+## 2.4.12
+- Independent list scrolling
+- Find TODOs in .vue files
+
+## 2.4.11
+- Fix issue with project path when opening board
+- ignore tasks found in list if list has property `ignore: true` in config.lists
+
+## 2.4.10
+- Use [persvr/rql: Resource Query Language](https://github.com/persvr/rql) for querying
+
+## 2.4.9
+- Fix issue with transform
+
+## 2.4.6
+- Only return modified tasks from transform
+
+## 2.4.4
+- Fix bug where project journal is created in the wrong project
+
+## 2.4.3
+- Fix issue with chokidar.  Upgrade to 2.x
+- Add file and directory context menus
+
+## 2.4.2
+- Wait until imdone is done saving modified files to transform tasks
+- Use HTML5 notifications
+
+## 2.4.1
+- Don't remind if task has completed metadata
+- Set reminder to notify every 5 minutes until remind metadata is removed or changed
+- Remove reminder if completed
+- Fix issue #360
+
+## 2.4.0
+- Add export to imdone-export.json with alt-x
+- Set explicit order on config
+- Use meta created and completed instead of todo.txt created and completed
+### For [imdone.io](https://imdone.io) subscribers
+- replace $now and $today variables with timestamp and date on paid plans
+- replace plain text reminders with remind:[timestamp] on paid plans
+- replace plain text due with due:[timestamp] on paid plans
+- automatic completed:[timestamp]
+- Add OS notifications for remind:[timestamp]
+
+## 2.3.36
+- Add GAMS project support
+
+## 2.3.35
+- Update Readme
+- Improve styling for filters
+
+## 2.3.34
+- Add .pug to languages
+- Update comment symbol for .jade and .pug to be //-
+
+## 2.3.33
+- Update screenshot in README
+
+## 2.3.32
+- Fix image style for description in cards
+- Update README
+
+## 2.3.30
+- Allow hash style tasks in code if they're in config.lists or config.code.include_lists
+
+## 2.3.29
+- Better detection of task ending description
+
+## 2.3.27
+- Add project daily journal to add daily journal files in the open project.  Alt+p
+
 ## 2.3.24
 - Live checklist support.  Update TODO checklists from your board.
 
@@ -473,7 +589,7 @@
 * Remove clunky transition on list rename
 
 ## 1.1.3
-* Add list rename supprt
+* Add list rename support
 
 ## 1.1.2
 * Add filter link support #filter/*filter*
@@ -501,4 +617,4 @@
 
 ----
 
-#TODO: Remember to update changelog before +publishing +package @piascikj id:0 gh:237
+#TODO: Remember to update changelog before +publishing +package @piascikj gh:237 id:66

@@ -20,10 +20,26 @@ function mixin(repo, fs) {
   fs = fs || require('fs');
 
   repo = fsStore(repo, fs);
-  repo.worker = fork(workerPath)
+  repo.pause = () => repo.paused = true
+  repo.resume = () => delete repo.paused
+  repo.worker = fork(workerPath, {silent: true})
+  repo.worker.stdout.on('data', (data) => {
+     log(`stdout: ${data}`);
+  });
+
+  repo.worker.stderr.on('data', (data) => {
+    log(`stderr: ${data}`);
+  });
+
+  repo.worker.on('close', (code) => {
+    log(`child process exited with code ${code}`);
+  });
   repo.worker.on('message', ({event, data}) => {
+    log(`Received message from watcher for ${repo.path} event:${event}`)
+    if (repo.paused) return
     emitter.emit(event, data)
   })
+
   var _init = repo.init;
   repo.init = function(cb) {
     _init.call(repo, function(err, files) {
@@ -34,23 +50,23 @@ function mixin(repo, fs) {
 
   var _destroy = repo.destroy;
   repo.destroy = function() {
+    log(`Destroying watcher for ${repo.path}`)
     repo.worker.send({event: 'destroyWatcher'})
+    repo.reminders.destory();
     _destroy.apply(repo);
   };
 
   var _refresh = repo.refresh;
   let refreshing = false;
   repo.refresh = function(cb) {
-    // console.log('refresh called')
     if (refreshing) {
       if (cb) return cb()
       return
     }
-    // console.log('running refresh')
     refreshing = true
     emitter.once('refresh', function() {
-      // console.log('received refresh')
       _refresh.call(repo, function(err, files) {
+        repo.reminders.schedule();
         repo.initWatcher();
         refreshing = false
         if (cb) cb(err, files);
@@ -70,6 +86,9 @@ function mixin(repo, fs) {
   };
 
   const WATCHER_EVENTS = {
+    log: function(data) {
+      log(data)
+    },
     add: function(path) {
       log("Watcher received add event for file: " + path);
       var relPath = repo.getRelativePath(path);
@@ -87,7 +106,7 @@ function mixin(repo, fs) {
     },
     addDir: function(path) {log('Directory', path, 'has been added');},
     change: function(path) {
-      console.log(`received a change for ${path}`)
+      log(`received a change for ${path}`)
       log("Watcher received change event for file: " + path);
       var relPath = repo.getRelativePath(path);
       var file = repo.getFile(relPath) || relPath;
@@ -111,11 +130,13 @@ function mixin(repo, fs) {
       repo.emitFileUpdate(file);
     },
     unlinkDir: function(path) {log('Directory', path, 'has been removed');},
-    error: function(error) {log('Error while watching files:', error);}
+    error: function(error) {log('Error while watching files:', error);},
+    reminders: (tasks) => tasks.forEach(task => repo.reminders.notify(task))
   }
   repo.initWatcher = function() {
-    log("Creating a new watcher");
     let data = {path: repo.path, exclude: repo.config.exclude, ignorePatterns: repo.ignorePatterns}
+    log(`Creating a new watcher with ${JSON.stringify(data)}`);
+
     repo.worker.send({event: 'initWatcher', data})
     _.keys(WATCHER_EVENTS).forEach( key => {
       emitter.removeListener(key, WATCHER_EVENTS[key])

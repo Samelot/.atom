@@ -22,7 +22,7 @@
       "READY",
       "ICEBOX",
       "INBOX",
-      "I"
+      "QUESTION"
     ]
   },
   "lists": [
@@ -39,20 +39,13 @@
       "hidden": false
     },
     {
-      "name": "READY",
-      "hidden": true
-    },
-    {
-      "name": "REVIEW",
-      "hidden": false
-    },
-    {
       "name": "CHANGED",
       "hidden": true
     },
     {
-      "name": "NOTE",
-      "hidden": true
+      "name": "DONE",
+      "hidden": false,
+      "ignore": true
     }
   ],
   "marked": {

@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
+        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
-        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
+        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
+        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117106-11315-75zb4p.wybrorbe29"
+      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-118315-4016-hspgrz.dwv04fgvi"
     ]
   ],
-  "_from": "../d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
-  "_id": "fold-navigator@0.0.620",
+  "_from": "../d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
+  "_id": "fold-navigator@0.0.622",
   "_inCache": true,
   "_location": "/fold-navigator",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
+    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
-    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
+    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
+    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
-  "_shasum": "9cea492eda1f3b117a3e1eafbd32dd98a702768e",
+  "_resolved": "file:../d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
+  "_shasum": "4fd5b484a31ea8632e711561fe95a7809e27b676",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-117106-11315-1xht8pb.72qh5jnhfr/package.tgz",
-  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-117106-11315-75zb4p.wybrorbe29",
+  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4016-xvkgm2.z4rpjsjor/package.tgz",
+  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-118315-4016-hspgrz.dwv04fgvi",
   "activationCommands": {
     "atom-workspace": "fold-navigator:toggle"
   },
@@ -43,7 +43,8 @@
   },
   "dependencies": {
     "fuzzaldrin": "^2.1.0",
-    "fuzzaldrin-plus": "^0.1.0"
+    "fuzzaldrin-plus": "^0.1.0",
+    "lodash": "^4.17.5"
   },
   "description": "A preview of your source code through code folding points. ",
   "devDependencies": {},
@@ -70,5 +71,5 @@
     "type": "git",
     "url": "git+https://github.com/turigeza/fold-navigator.git"
   },
-  "version": "0.0.620"
+  "version": "0.0.622"
 }

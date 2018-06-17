@@ -31,6 +31,9 @@
       "github"
       "folded-code-preview"
       "atom-cursor-indent"
+      "nav-panel-plus"
+      "status-bar"
+      "pigments"
     ]
     packagesWithKeymapsDisabled: [
       "github"
@@ -39,6 +42,7 @@
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
+    fontSize: 17
     softWrap: true
     tabLength: 4
   "env-from-shell":
@@ -48,6 +52,7 @@
   "git-diff":
     showIconsInEditorGutter: true
   minimap:
+    autoToggle: false
     displayMinimapOnLeft: true
     plugins:
       bookmarks: true
@@ -79,14 +84,17 @@
       "COMBAK"
       "TEMP"
       "SAM"
+      "REMOVE"
+      "READYOBJ"
+      "PALETTES"
     ]
     showInTable: [
-      "Line"
       "Text"
       "Type"
-      "Path"
     ]
     sortBy: "Line"
+  "tree-view":
+    autoReveal: true
 ".text.todo_extra":
   editor:
     showIndentGuide: false

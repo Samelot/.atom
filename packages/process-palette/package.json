@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
+        "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
-        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
+        "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
+        "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-1171023-23039-1osmk7c.7b4lf5stt9"
+      "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-118315-4071-umg0eu.8scz8e61or"
     ]
   ],
-  "_from": "../d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
-  "_id": "process-palette@0.16.0",
+  "_from": "../d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
+  "_id": "process-palette@0.16.1",
   "_inCache": true,
   "_location": "/process-palette",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
+    "raw": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
-    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
+    "rawSpec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
+    "spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
-  "_shasum": "75692bfbfad8006dc9e15dde3a4fd9f5e464787b",
+  "_resolved": "file:../d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
+  "_shasum": "dc9d0f7f945322a46c9a688bb094e11bb2785a35",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-1171023-23039-1x1ss2a.0gs24kj4i/package.tgz",
-  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-1171023-23039-1osmk7c.7b4lf5stt9",
+  "_spec": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/d-118315-4071-tdanmc.3986jyk3xr/package.tgz",
+  "_where": "/private/var/folders/wq/zctg88k56d141d2ym1myqf7m0000gn/T/apm-install-dir-118315-4071-umg0eu.8scz8e61or",
   "bugs": {
     "url": "https://github.com/morassman/process-palette/issues"
   },
@@ -72,5 +72,5 @@
     "type": "git",
     "url": "git+https://github.com/morassman/process-palette.git"
   },
-  "version": "0.16.0"
+  "version": "0.16.1"
 }
