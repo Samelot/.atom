@@ -2,6 +2,7 @@
   "bottom-dock":
     startOpen: true
   core:
+    automaticallyUpdate: false
     destroyEmptyPanes: false
     disabledPackages: [
       "about"
@@ -42,7 +43,7 @@
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 17
+    fontSize: 19
     softWrap: true
     tabLength: 4
   "env-from-shell":
