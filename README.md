@@ -1,4 +1,4 @@
-##My WORKING Atom setup.
+## My WORKING Atom setup.
 
 Works with:
 
