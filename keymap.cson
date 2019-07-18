@@ -1,6 +1,5 @@
 # unset keymaps in 'body' to prevent their occurence when focusing in Settings
 'body':
-    'cmd-shift-t': 'unset!'
     'escape': 'unset!'
     'ctrl-alt-cmd-m': 'unset!'
 
@@ -29,7 +28,6 @@
     'cmd-f3': 'process-palette:toggle'
     'shift-f3': 'minimap:toggle'
     'shift-f5': 'macros:coronaSimulatorKill'
-    'ctrl-shift-t': 'unset!'
     'cmd-.': 'application:open-your-keymap'
     'cmd-shift-.': 'application:open-your-config'
     'cmd-\\': 'tree-view:toggle-focus'

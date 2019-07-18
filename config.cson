@@ -14,7 +14,6 @@
       "expand-region"
       "full-path-in-title-bar"
       "jumpy"
-      "language-todo"
       "line-jumper"
       "line-navigation"
       "metrics"
@@ -35,15 +34,21 @@
       "nav-panel-plus"
       "status-bar"
       "pigments"
+      "todo-show"
     ]
     packagesWithKeymapsDisabled: [
       "github"
       "recent-files-fuzzy-finder"
     ]
     telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "one-light-syntax"
+    ]
   editor:
     autoIndentOnPaste: false
-    fontSize: 19
+    fontSize: 17
+    showInvisibles: false
     softWrap: true
     tabLength: 4
   "env-from-shell":
@@ -84,19 +89,15 @@
       "QUESTION"
       "COMBAK"
       "TEMP"
-      "SAM"
       "REMOVE"
       "READYOBJ"
       "PALETTES"
+      "SAM"
     ]
     showInTable: [
       "Text"
       "Type"
     ]
-    sortBy: "Line"
   "tree-view":
     autoReveal: true
-".text.todo_extra":
-  editor:
-    showIndentGuide: false
-    showInvisibles: false
+  "two-light-ui": {}
